@@ -1,0 +1,34 @@
+.slider {
+  .slick-arrow {
+    @extend %transform-middle-y;
+    position: absolute;
+    top: 50%;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #777;
+
+    &:hover {
+      background-color: rgba(#f5f5f5, 0.8);
+    }
+
+    &:active {
+      background-color: rgba(#f7f7f7, 0.8);
+    }
+
+    &__icon {
+      font-size: 1.8em;
+    }
+  }
+
+  .slick-prev {
+    right: 100%;
+  }
+
+  .slick-next {
+    left: 100%;
+  }
+}

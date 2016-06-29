@@ -1,0 +1,92 @@
+html {
+  // font-size: 15px;
+
+  @include mq($from: sm) {
+    font-size: map-get($container-fonts-size, "sm");
+  }
+
+  @include mq($from: md) {
+    font-size: map-get($container-fonts-size, "md");
+  }
+
+  @include mq($from: lg) {
+    font-size: map-get($container-fonts-size, "lg");
+  }
+
+  @include mq($from: xl) {
+    font-size: map-get($container-fonts-size, "xl");
+  }
+
+  @include mq($from: xxl) {
+    font-size: map-get($container-fonts-size, "xxl");
+  }
+}
+
+body {
+  line-height: $baseLineHeight;
+  font-family: $mainFontFamily;
+  color: $mainColor;
+  background-color: #fff;
+}
+
+.text-small {
+  font-size: rem(14);
+}
+
+.text-medium {
+  font-size: 1rem;
+}
+
+.text-large {
+  font-size: rem(19);
+}
+
+
+
+p, ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p + p,
+p + ul,
+p + ol,
+p + table,
+p + dl {
+  margin-top: 0.8em;
+}
+
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: em(50);
+  margin-bottom: em(20);
+  font-weight: 600;
+  font-family: $altFontFamily;
+}
+
+
+h1, .h1 {
+  font-size: em(27);
+}
+
+h2, .h2 {
+  font-size: em(22);
+}
+
+h3, .h3 {
+  font-size: em(20);
+}
+
+h4, .h4 {
+  font-size: em(19);
+}
+
+h5, .h5 {
+  font-size: 1em;
+}
+
+h6, .h6 {
+  font-size: 0.9em;
+}

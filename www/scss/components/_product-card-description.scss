@@ -1,0 +1,13 @@
+.product-card-description {
+  font-family: $altFontFamily;
+  &__name {
+    margin-top: 0;
+    font-size: rem(22);
+    font-weight: normal;
+    margin-bottom: 0.5em;
+  }
+
+  &__list {
+    @extend %list-clear;
+  }
+}

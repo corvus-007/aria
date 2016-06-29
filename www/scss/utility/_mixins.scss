@@ -1,0 +1,83 @@
+
+/*==================================
+=            Response            =
+==================================*/
+
+@mixin response($grid-breakpoints) {
+  
+  @each $key, $value in $grid-breakpoints {
+    
+    @if $value != null {
+      
+      @media (max-width: $value - 1) {
+        .hidden-#{$key}-down {
+          display: none !important;
+        }
+      }
+    
+      @media (min-width: $value) {
+        .hidden-#{$key}-up {
+          display: none !important;
+        }
+        .visible-#{$key}-inline {
+          display: inline !important;
+        }
+        .visible-#{$key}-block {
+          display: block !important;
+        }
+        .visible-#{$key}-inline-block {
+          display: inline-block !important;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin createColumn($col, $colCount: 12) {
+  width: percentage($col / $colCount);
+  box-sizing: border-box;
+}
+
+
+/// Подстраивание изображений (и не только) под заданные пропорции
+@mixin responsiveObject($target-width, $target-height, $selector_nest: 'img') {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: percentage($target-height / $target-width);
+
+  #{selector_nest($selector_nest)} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    // Dependens on Modernizer
+    // Context .objectfit
+    .no-objectfit & {
+      height: auto;
+    }
+    // Context .no-objectfit.csstransforms
+    .no-objectfit.csstransforms & {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  
+}

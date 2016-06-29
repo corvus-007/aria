@@ -1,0 +1,35 @@
+/*==========================
+=            Em convert            =
+==========================*/
+
+$conext-default: $baseFontSize;
+
+@function em($target, $context: $conext-default) {
+  @if (unitless($target)) {
+    $target: $target * 1px;
+  }
+  
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  
+  @return ($target / $context) * 1em;
+}
+
+
+/*===================================
+=            Rem convert            =
+===================================*/
+
+@function rem($target, $context: $conext-default) {
+  @if (unitless($target)) {
+    $target: $target * 1px;
+  }
+  
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  
+  @return ($target / $context) * 1rem;
+}
+

@@ -1,0 +1,33 @@
+.basket-header {
+
+  &__wraplink {
+    @extend %d-table;
+    text-decoration: none;
+
+    // Context flexbox
+    .flexbox & {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    @extend %d-td;
+    vertical-align: middle;
+    color: $mainColor;
+  }
+
+  &__text-line {
+    display: block;
+  }
+
+  &__icon-wrapper {
+    @extend %d-td;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+  .icon {
+    font-size: 2.2em;
+  }
+}

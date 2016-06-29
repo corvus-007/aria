@@ -1,0 +1,30 @@
+.contacts-global {
+  font-size: 0.9em;
+  margin-bottom: 4em;
+
+  &__row {
+
+  }
+
+  &__column {
+
+  }
+
+  &__section {
+    & + & {
+      margin-top: 3em;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &__section-title {
+    margin-top: 0;
+    margin-bottom: 0.6em;
+    font-size: rem(19);
+  }
+
+}

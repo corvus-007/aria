@@ -1,0 +1,11 @@
+.goods-slider {
+  margin-left: -10px;
+  margin-right: -10px;
+  &__item {
+
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+}

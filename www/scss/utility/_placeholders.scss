@@ -1,0 +1,55 @@
+%border-rounded {
+  border-radius: 2px;
+}
+
+%border-rounded--top {
+  border-radius: 2px 2px 0 0;
+}
+
+%border-rounded--bottom {
+  border-radius: 0 0 2px 2px;
+}
+
+// List clear
+%list-clear {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%transform-middle {
+  transform: translateX(-50%) translateY(-50%);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+%transform-middle-x {
+  transform: translateX(-50%);
+  transform: translate3d(-50%, 0, 0);
+}
+
+%transform-middle-y {
+  transform: translateY(-50%);
+  transform: translate3d(0, -50%, 0);
+}
+
+%box-sizing-bordered {
+  box-sizing: border-box;
+}
+
+%ui-border {
+  border: 2px solid $accentColor;
+}
+
+// Pseudo table
+%d-table {
+  display: table;
+}
+
+%d-tr {
+  display: table-row;
+}
+
+%d-td {
+  display: table-cell;
+}
+

@@ -1,0 +1,283 @@
+/*============================
+=            Grid            =
+============================*/
+$gutter: 6px;
+$gutterExtraCondensed: 1px;
+$gutterCondensed: ($gutter / 2);
+$gutterLong: ($gutter * 2);
+$gutterExtraLong: ($gutter * 4);
+$columns: 12;
+
+
+.container {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  position: relative;
+  // box-sizing: border-box;
+
+  @include mq($from: sm) {
+    max-width: map-get($container-max-widths, "sm");
+  }
+
+  @include mq($from: md) {
+    max-width: map-get($container-max-widths, "md");
+  }
+
+  @include mq($from: lg) {
+    max-width: map-get($container-max-widths, "lg");
+  }
+
+  @include mq($from: xl) {
+    max-width: map-get($container-max-widths, "xl");
+  }
+
+  @include mq($from: xxl) {
+    max-width: map-get($container-max-widths, "xxl");
+  }
+
+  &_narrow {
+
+    @include mq($from: sm) {
+      max-width: (map-get($container-max-widths, "sm") - 150px);
+    }
+
+    @include mq($from: md) {
+      max-width: (map-get($container-max-widths, "md") - 150px);
+    }
+
+    @include mq($from: lg) {
+      max-width: (map-get($container-max-widths, "lg") - 150px);
+    }
+
+    @include mq($from: xl) {
+      max-width: (map-get($container-max-widths, "xl") - 150px);
+    }
+
+    @include mq($from: xxl) {
+      max-width: (map-get($container-max-widths, "xxl") - 150px);
+    }
+  }
+
+  &_wide {
+
+    @include mq($from: sm) {
+      max-width: (map-get($container-max-widths, "sm") + 150px);
+    }
+
+    @include mq($from: md) {
+      max-width: (map-get($container-max-widths, "md") + 150px);
+    }
+
+    @include mq($from: lg) {
+      max-width: (map-get($container-max-widths, "lg") + 150px);
+    }
+
+    @include mq($from: xl) {
+      max-width: (map-get($container-max-widths, "xl") + 150px);
+    }
+
+    @include mq($from: xxl) {
+      max-width: (map-get($container-max-widths, "xxl") + 150px);
+    }
+  }
+
+  &_fluid {
+    max-width: 100%;
+  }
+}
+
+
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: percentage($i / $columns);
+  }
+  .col-offset-#{$i} {
+    margin-left: percentage($i / $columns);
+  }
+}
+
+
+.row {
+  @include clearfix;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  // display: flex;
+  // flex-wrap: wrap;
+
+  &:last-of-type {
+    // margin-bottom: 0;
+  }
+
+  // Удаляет маржины по бокам
+  &_no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // Удаляет маржин снизу
+  &_no-mb {
+    margin-bottom: 0;
+  }
+
+  // Наименьший отступ
+  &_extra-condensed {
+    margin-left: -$gutterExtraCondensed;
+    margin-right: -$gutterExtraCondensed;
+  }
+
+  // Уменьшает отступы в 2 раза
+  &_condensed {
+    margin-left: -$gutterCondensed;
+    margin-right: -$gutterCondensed;
+  }
+
+  // Увеличивает отступы в 2 раза
+  &_long {
+    margin-left: -$gutterLong;
+    margin-right: -$gutterLong;
+  }
+
+  // Увеличивает отступы 
+  &_extra-long {
+    margin-left: -$gutterExtraLong;
+    margin-right: -$gutterExtraLong;
+  }
+}
+
+[class^="col-"],
+[class*="col-"] {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  min-height: 1px;
+  position: relative;
+  display: inline;
+
+  .row_extra-condensed > & {
+    padding-left: $gutterExtraCondensed;
+    padding-right: $gutterExtraCondensed;
+  }
+
+  .row_condensed > & {
+    padding-left: $gutterCondensed;
+    padding-right: $gutterCondensed;
+  }
+
+  .row_long > & {
+    padding-left: $gutterLong;
+    padding-right: $gutterLong;
+  }
+
+  .row_extra-long > & {
+    padding-left: $gutterExtraLong;
+    padding-right: $gutterExtraLong;
+  }
+
+  .row_no-gutters > & {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .row_no-mb > & {
+    // margin-bottom: 0;
+  }
+}
+
+
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: percentage($i / $columns);
+  }
+  .col-offset-#{$i} {
+    margin-left: percentage($i / $columns);
+  }
+}
+
+
+
+// SM
+@include mq($from: sm) {
+  @for $i from 1 through $columns {
+    .col-sm-#{$i} {
+      width: percentage($i / $columns);
+    }
+    .col-offset-sm-#{$i} {
+      margin-left: percentage($i / $columns);
+    }
+  }
+}
+
+@include mq($from: sm, $until: md) {
+  @for $i from 1 through $columns {
+    .col-push-sm-#{$i} {
+      left: percentage($i / $columns);
+    }
+    .col-pull-sm-#{$i} {
+      left: (percentage($i / $columns) * -1);
+    }
+  }
+}
+
+// MD
+@include mq($from: md) {
+  @for $i from 1 through $columns {
+    .col-md-#{$i} {
+      width: percentage($i / $columns);
+    }
+    .col-offset-md-#{$i} {
+      margin-left: percentage($i / $columns);
+    }
+  }
+}
+
+// LG
+@include mq($from: lg) {
+  @for $i from 1 through $columns {
+    .col-lg-#{$i} {
+      width: percentage($i / $columns);
+    }
+    .col-offset-lg-#{$i} {
+      margin-left: percentage($i / $columns);
+    }
+  }
+}
+
+// XL
+@include mq($from: xl) {
+  @for $i from 1 through $columns {
+    .col-xl-#{$i} {
+      width: percentage($i / $columns);
+    }
+    .col-offset-xl-#{$i} {
+      margin-left: percentage($i / $columns);
+    }
+  }
+}
+
+// XXL
+@include mq($from: xxl) {
+  @for $i from 1 through $columns {
+    .col-xxl-#{$i} {
+      width: percentage($i / $columns);
+    }
+    .col-offset-xxl-#{$i} {
+      margin-left: percentage($i / $columns);
+    }
+  }
+}
+
+
+.col-center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+/*=====  End of Grid  ======*/

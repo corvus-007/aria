@@ -1,0 +1,55 @@
+/*===============================
+=            Helpers            =
+===============================*/
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-danger {
+  color: $dangerColor;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Table layout fixed
+.table-fixed {
+  @include mq($from: md) {
+    table-layout: fixed;
+  }
+}
+
+.list-clear {
+  @extend %list-clear;
+}
+
+.clear {
+  @include clearfix();
+}
+/*=====  End of Helpers  ======*/

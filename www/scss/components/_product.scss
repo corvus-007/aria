@@ -1,0 +1,158 @@
+.product {
+  border: 1px solid #acacac;
+  text-align: center;
+  font-family: $altFontFamily;
+  font-size: rem(16);
+  margin-bottom: 1em;
+
+  // 
+  border: 1px solid #e7e7e7;
+  @extend %border-rounded;
+  padding: rem(15);
+  transition: border-color 0.18s ease-in;
+
+  &:hover {
+    border-color: #acacac;
+    transition-timing-function: ease-out;
+
+    .product__name {
+      color: #000;
+      a {
+
+      }
+    }
+  }
+  // 
+
+  &__name {
+    // 
+    margin-top: rem(-15);
+    margin-left: rem(-15);
+    margin-right: rem(-15);
+    box-sizing: border-box;
+    // 
+    line-height: normal;
+    font-size: rem(17);
+    // background-color: $accentColor;
+    // color: #fff;
+      margin-bottom: 1em;
+      color: #666;
+    a {
+      display: block;
+      padding: rem(15) rem(8) rem(5);
+      color: currentColor;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($accentColor2, 7%);
+        // background-color: $accentColor;
+        // color: #fff;
+      }
+    }
+
+  }
+
+  &__helper-frame {
+    position: relative;
+  }
+
+  &__stickers-list {
+    @extend %list-clear;
+    position: absolute;
+    top: 0.5em;
+      top: 0;
+    left: 0.5em;
+      left: 0;
+    font-size: 0.8em;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__sticker {
+    padding: 0.3em 0.65em;
+    color: #fff;
+    border-radius: 2px;
+
+    & + & {
+      margin-top: 0.25em
+    }
+
+    &_discount {
+      background-color: #d48;
+    }
+
+    &_new {
+      background-color: #98b;
+    }
+
+    &_hit {
+      // background-color: #fb8c00;
+      background-color: #ffc107;
+    }
+  }
+
+
+
+
+  &__image-wrapper {
+    @include responsiveObject(180, 230);
+    margin-bottom: 0.5em;
+  }
+
+  &__image {
+
+  }
+
+  &__price {
+    // padding: rem(16) rem(5);
+    padding: rem(10) rem(5);
+    // background-color: $accentColor2;
+    // color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  &__price-old {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    font-size: 0.9em;
+    position: relative;
+    font-weight: normal;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba($dangerColor, 0.8);
+      transform: rotate(-10deg);
+      left: -5px;
+      right: -5px;
+      top: 50%;
+      mix-blend-mode: hard-light;
+    }
+  }
+
+  &__action {
+    padding: rem(16) rem(5);
+    padding: rem(14) rem(5);
+    width: 100%;
+    opacity: 0.75;
+    letter-spacing: 0.05em;
+    // text-transform: none;
+    font-weight: normal;
+    font-family: $mainFontFamily;
+    font-size: rem(12);
+    transition: 0.2s;
+    // background-color: #fff;
+    // color: $mainColor;
+    
+    .product:hover & {
+      opacity: 1;
+    }
+
+    &:hover {
+      background-color: $accentColor;
+      border-color: $accentColor;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.section {
+  padding-top: rem(40);
+  padding-bottom: rem(50);
+}
+
+.section__header {
+  @extend .container;
+  margin-bottom: rem(40);
+  position: relative;
+  padding-bottom: 0.5em;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    border-bottom: 1px solid;
+  }
+}
+
+.section__title {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: rem(25);
+  font-weight: 600;
+}
+
+.section__content {
+  @extend .container;
+}

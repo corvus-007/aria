@@ -1,0 +1,58 @@
+// Видимая форма обратного звонка
+
+.primary-callback-form {
+  $cf_mini: '#{&}_mini';
+
+
+  padding-top: rem(50);
+  padding-bottom: rem(50);
+  background-image: url("../../images/bg-primary-callback.jpg");
+  background-image: url("../../images/overlay-primary-callback.png"), url("../../images/bg-primary-callback.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: $cf_mini;
+
+  &__title {
+    @extend %border-rounded;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-size: rem(25);
+    padding: 0.5em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba(#343434, 0.95);
+    color: #fff;
+    font-weight: 600;
+
+    #{$cf_mini} & {
+      margin-bottom: 1em;
+      font-size: rem(20);
+    }
+  }
+
+  .form-control,
+  .form-submit {
+    font-size: rem(16);
+  }
+
+  .form-control {
+    background-color: rgba(#fff, 0.9);
+  }
+
+  @include mq($from: md) {
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .form-submit {
+      padding-top: rem(14);
+      padding-bottom: rem(14);
+    }
+  }
+
+  &_mini {
+    padding: 2em;
+  }
+}

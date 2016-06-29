@@ -1,0 +1,37 @@
+.site-header {
+  background-color: #fff;
+
+  &__top-panel {
+    @extend .container;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: rem(14);
+    font-family: $altFontFamily;
+
+    .flexbox & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  &__brand-wrapper {
+    float: left;
+  }
+
+  &__search-wrapper {
+    flex-grow: 0.1;
+  }
+
+  &__basket-wrapper {
+
+  }
+
+  &__nav-wrapper {
+    background-color: $accentColor;
+  }
+
+}

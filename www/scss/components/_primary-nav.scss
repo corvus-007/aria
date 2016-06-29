@@ -1,0 +1,48 @@
+.primary-nav {
+  @extend .container;
+  &__list {
+    @extend %list-clear;
+    display: table;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: $altFontFamily;
+    user-select: none;
+    color: #fff;
+  }
+
+  &__item {
+    display: table-cell;
+
+    &_active {
+      
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0 1em;
+    line-height: 3rem;
+    text-decoration: none;
+    color: currentColor;
+    transition: background-color 0.22s ease-out;
+
+    border-right: 1px solid rgba(#fff, 0.5);
+    &:hover {
+      color: currentColor;
+      background-color: darken($accentColor, 4%);
+    }
+
+    .primary-nav__item_active & {
+      background-color: #fff;
+      color: $mainColor;
+      cursor: default;
+    }
+
+    .primary-nav__item:first-child & {
+      border-left: 1px solid rgba(#fff, 0.5);
+    }
+  }
+
+
+}

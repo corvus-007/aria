@@ -1,0 +1,44 @@
+.testimonial {
+  line-height: 1.5;
+  font-family: $altFontFamily;
+  margin-bottom: 3em;
+
+  &-title {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    line-height: normal;
+    font-weight: normal;
+  }
+
+  &-text {
+    color: #444;
+    margin-bottom: 0.7em;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-footer {
+    color: #777;
+    font-size: 0.9em;
+  }
+
+  &-footer-item {
+    time {
+      // padding: 0.1em 0.3em;
+      color: #6F6F6F;
+      // background-color: #FFEE58;
+    }
+  }
+
+  @include mq($from: md) {
+    &-text {
+      font-size: 0.9em;
+      line-height: 1.3;
+    }
+
+    &-footer {
+      font-size: 0.8em;
+    }
+  }
+}

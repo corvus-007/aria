@@ -1,0 +1,62 @@
+.tabs {
+  &__panel {
+    @extend %list-clear;
+    border-bottom: 2px solid $accentColor2;
+    text-transform: uppercase;
+    // font-size: rem(11);
+    // font-weight: 600;
+    
+    display: flex;
+
+    li {
+      float: left;
+      color: #fff;
+      transition: background-color 0.2s;
+      background-color: $accentColor2;
+      margin-bottom: -2px;
+
+      &:hover {
+        // color: ;
+      }
+
+      &.active {
+        // color: $mainColor;
+        background-color: $accentColor;
+
+        a {
+          cursor: default;
+        }
+      }
+
+    }
+
+    a {
+      display: block;
+      padding: rem(10) rem(5);
+      text-decoration: none;
+      color: currentColor;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    margin-top: 2em;
+  }
+
+  &__title {
+    font-size: rem(16);
+    font-weight: 600;
+  }
+
+  @include mq($from: md) {
+    
+    &__panel {
+      letter-spacing: 1px;
+
+      a {
+        text-align: left;
+        padding: rem(8) rem(50);
+      }
+    }
+  }
+}

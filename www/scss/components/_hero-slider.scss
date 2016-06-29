@@ -1,0 +1,121 @@
+.hero-slider {
+  overflow: hidden;
+
+  &__item {
+    min-height: 440px;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .slick-dots {
+    @extend %list-clear;
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    button {
+      padding: 0;
+      box-sizing: border-box;
+      mix-blend-mode: hard-light;
+    }
+  }
+
+
+  @include mq($from: md) {
+
+    &:hover {
+      .slick-arrow {
+        transition: transform 0.6s, opacity 0.2s;
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    &-item {
+      min-height: 500px;
+      height: 60vmin;
+    }
+
+    .slick-arrow {
+      position: absolute;
+      z-index: 1;
+      width: 50px;
+      height: 90px;
+      top: 50%;
+      margin-top: -45px;
+      bottom: 0;
+      background: none;
+      background-repeat: no-repeat;
+      outline: none;
+      border: none;
+      background-size: contain;
+      background-position: 50%;
+      cursor: pointer;
+      transition: opacity 0.2s 0.3s, transform 0.3s 0.3s;
+      overflow: hidden;
+      text-indent: 110%;
+      padding: 0;
+      font-size: 0;
+      background-color: transparent;
+      opacity: 0;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+
+    }
+
+    .slick-prev {
+      left: 2rem;
+      right: auto;
+      transform: translate3d(-5rem, 0 , 0);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 130'%3E%3Cpath fill='%23174f53' d='M38.5 128.8c-1 0-2-.5-2.6-1.5l-35-61c-.7-1-.7-2 0-3L36 2.7c.7-1.4 2.6-2 4-1 1.4.7 2 2.6 1 4l-34 59 34 59.6c1 1.4.4 3.3-1 4-.5.4-1 .5-1.5.5z'/%3E%3C/svg%3E");
+    }
+
+    .slick-next {
+      right: 2rem;
+      left: auto;
+      transform: translate3d(5rem, 0 , 0);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 130'%3E%3Cpath fill='%23174f53' d='M3.5 128.8c-.5 0-1 0-1.5-.4-1.4-.8-2-2.7-1-4l34-59.6-34-59C0 4.2.5 2.3 2 1.5c1.4-.8 3.3-.3 4 1l35 60.7c.6 1 .6 2 0 3l-35 61c-.5 1-1.5 1.5-2.5 1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slick-dots {
+      li {
+        margin: 0 0.3em;
+      }
+
+      button {
+        border: 1px solid $mainColor;
+        border: none;
+        border-radius: 50%;
+        width: 0.6em;
+        height: 0.6em;
+        background-color: #fff;
+        overflow: hidden;
+        vertical-align: middle;
+        text-indent: 100px;
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .slick-active {
+        button {
+          background-color: $accentColor;
+        }
+      }
+    }
+  }
+}

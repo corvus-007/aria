@@ -1,0 +1,177 @@
+$heightMobileButton: 40px;
+$heightLaptopButton: 36px;
+$heightDektopButton: 47px;
+
+%button-default {
+  @extend %border-rounded;
+  padding: 0.7em 1.2em;
+  max-width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  text-decoration: none;
+  vertical-align: middle;
+  outline: none;
+  border: none;
+  background: none;
+  position: relative;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.15s ease-out;
+  text-align: center;
+  font-weight: 600;
+  font-family: $altFontFamily;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  form & {
+    letter-spacing: 1px;
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
+}
+
+%button-outline {
+  @extend %border-rounded;
+  padding: calc(0.7em - 2px) calc(1.2em - 2px);
+  max-width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  text-decoration: none;
+  vertical-align: middle;
+  outline: none;
+  border: 1px solid;
+  background: none;
+  position: relative;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.15s ease-out;
+  text-align: center;
+  font-weight: 600;
+  font-family: $altFontFamily;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  form & {
+    letter-spacing: 1px;
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+}
+
+%button-outline-color-dark {
+  color: #ededed;
+  background: #fff;
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: darken(#ededed, 5%);
+  }
+
+  &:active {
+    background-color: #fff;
+    color: darken(#ededed, 10%);
+  }
+}
+
+// Sizes
+%button-size-small {
+  font-size: rem(14);
+}
+
+%button-size-medium {
+  font-size: rem(16);
+  padding: em(12, 11) em(20, 11);
+}
+
+%button-size-large {
+  font-size: rem(18)
+}
+
+@include mq($from: md) {
+  // Sizes
+  %button-size-medium {
+    padding: em(11, 16) em(20, 16);
+  }
+}
+
+@include mq($from: xxl) {
+  // Sizes
+  %button-size-medium {
+    padding: em(15, 16) em(20, 16);
+  }
+}
+
+// Colors
+%button-color-default {
+  background-color: $buttonColorDefault;
+  color: #fff;
+  &:hover,
+  &:focus {
+    background-color: lighten($buttonColorDefault, 5%);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: darken($buttonColorDefault, 5%);
+    color: #fff;
+  }
+}
+
+%button-color-dark {
+  background-color: $buttonColorDark;
+  color: #fff;
+  &:hover,
+  &:focus {
+    background-color: lighten($buttonColorDark, 5%);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: darken($buttonColorDark, 5%);
+    color: #fff;
+  }
+}
+
+%button-color-access {
+  background-color: $buttonColorAccess;
+  color: #fff;
+  &:hover,
+  &:focus {
+    background-color: lighten($buttonColorAccess, 5%);
+    color: #fff;
+  }
+
+  &:active {
+    background-color: darken($buttonColorAccess, 5%);
+    color: #fff;
+  }
+}
+
+.button {
+  @extend %button-default;
+  @extend %button-size-medium;
+  @extend %button-color-default;
+
+  &_dark {
+    @extend %button-color-dark;
+  }
+
+  &_access {
+    @extend %button-color-access;
+  }
+}
+
+.button-outline {
+  @extend %button-outline;
+  @extend %button-size-medium;
+
+  &_dark {
+    @extend %button-outline-color-dark;
+  }
+}
+
+.button_fluid {
+  width: 100%;
+}

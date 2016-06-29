@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+}
+
+
+::selection {
+    color: #fff;
+    background-color: $mainColor;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $accentColor2;
+  transition: color 0.2s;
+  &[href^="tel:"],
+  &[href^="tel:"]:hover,
+  &[href^="tel:"]:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: darken($accentColor2, 7%);
+  }
+}
+
+.link {
+  @extend a;
+}
+
+.link-dotted {
+  @extend a;
+  line-height: normal;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+

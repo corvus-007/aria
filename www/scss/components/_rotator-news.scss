@@ -1,0 +1,32 @@
+.rotator-news {
+  font-size: 0.8em;
+  font-family: $altFontFamily;
+
+  &__item {
+    white-space: nowrap;
+
+    &.slick-current {
+      .rotator-news__link {
+        background-color: $accentColor;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0.5em 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: $accentColor2;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.15s;
+
+    &:hover {
+      color: #fff;
+      background-color: darken($accentColor2, 5%);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.post {
+  &__header {
+    @extend .container;
+    margin-bottom: rem(55);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: rem(27);
+  }
+
+  &__content {
+
+  }
+
+}

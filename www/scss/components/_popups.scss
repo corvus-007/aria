@@ -1,0 +1,56 @@
+$mfp-overlay-color: #000;
+$mfp-overlay-opacity: 0.5;
+
+.popup {
+  position: relative;
+  background: #FFF;
+  padding: rem(60);
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+
+
+.mfp-zoom-out {
+  
+  /* start state */
+  .mfp-content {
+    opacity: 0;
+    transition: transform 0.3s ease-in, opacity 0.2s linear;
+    transform: scale(0.85);
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-content {
+      opacity: 1;
+      transform: none;
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    
+    .mfp-content {
+      transform: scale(1.2);
+      opacity: 0;
+      transition: transform 0.3s ease-out, opacity 0.3s linear;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+    
+  }
+  
+}
+

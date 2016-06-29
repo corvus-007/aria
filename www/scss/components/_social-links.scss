@@ -1,0 +1,34 @@
+.social-links {
+  @extend %list-clear;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    color: $mutedColor;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.2em;
+    text-decoration: none;
+    
+    &_vk {
+      &:hover {
+        color: #45668e;
+      }
+    }
+
+    &_ok {
+      &:hover {
+        color: #ed812b;
+      }
+    }
+  }
+
+  .icon {
+    font-size: 1.7em;
+  }
+}
+
+
+

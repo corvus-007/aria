@@ -1,0 +1,15 @@
+.section-special-offers {
+  @extend .section;
+
+  &__header {
+    @extend .section__header;
+  }
+
+  &__title {
+    @extend .section__title;
+  }
+
+  &__content {
+    @extend .section__content;
+  }
+}

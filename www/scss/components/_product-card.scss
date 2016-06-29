@@ -1,0 +1,60 @@
+.product-card {
+  margin-top: 3em;
+
+  &__row {
+    & + & {
+      margin-top: 3em;
+    }
+  }
+
+  &__title {
+    color: $accentColor;
+    margin-top: 0;
+  }
+
+  &__description {
+    margin-bottom: 2em;
+  }
+
+  &__price {
+    margin-bottom: rem(15);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0.3em 0.5em;
+    color: #e9a823;
+    font-family: $altFontFamily;
+  }
+
+  &__price-old {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    font-size: 0.9em;
+    position: relative;
+    font-weight: normal;
+    color: $mutedColor;
+
+    &:before {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba($dangerColor, 0.8);
+      transform: rotate(-10deg);
+      left: -5px;
+      right: -5px;
+      top: 50%;
+      mix-blend-mode: hard-light;
+    }
+    
+  }
+
+  &__action {
+    font-size: 1em;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    background-color: $accentColor2;
+  }
+
+  @include mq($from: md) {
+
+  }
+}

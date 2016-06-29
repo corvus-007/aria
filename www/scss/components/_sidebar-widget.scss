@@ -1,0 +1,14 @@
+.sidebar-widget {
+
+  & + & {
+    margin-top: 1.5em;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: rem(20);
+    font-family: $altFontFamily;
+    font-size: rem(26);
+    font-weight: 600;
+  }
+}

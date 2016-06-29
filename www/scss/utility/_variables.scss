@@ -1,0 +1,86 @@
+$mainColor: #1a1818;
+$brandColor: #005ba0;
+$accentColor: #174f53;
+$accentColor2: #65a3a1;
+$bgColor: #ededed;
+$accessColor: #00a075;
+$warningColor: #FFC107;
+$dangerColor: #ff154c;
+$darkColor: #1c1c1c;
+$lightColor: #eee;
+$mutedColor: #b6b5b5;
+
+
+
+
+$buttonColorDefault: $accentColor;
+$buttonColorAccess: $accessColor;
+$buttonColorDark: #323232;
+
+
+$mainFontFamily: 'Roboto', sans-serif;
+$altFontFamily: 'Roboto Condensed', sans-serif;;
+$baseFontSize: 18px;
+$baseLineHeight: 1.4;
+
+
+/*=====================================
+=            Mfp overrides            =
+=====================================*/
+
+// $mfp-overlay-opacity: 1;
+// $mfp-shadow: null;
+// $mfp-controls-opacity: 1;
+// $mfp-controls-border-color: #fff;
+// $mfp-inner-close-icon-color: #fff;
+
+/*=====  End of Mfp overrides  ======*/
+
+
+
+/*===================================
+=            Breakpoints            =
+===================================*/
+
+// Grid breakpoints
+//
+// Define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: null,
+  // Small screen / phone
+  sm: 544px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1280px,
+  xxl: 1920px
+) !default;
+
+$mq-breakpoints: $grid-breakpoints;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 650px,
+  md: 740px,
+  lg: 930px,
+  xl: 990px,
+  xxl: 1380px
+) !default;
+
+
+$container-fonts-size: (
+  sm: null,
+  md: null,
+  lg: 17px,
+  xl: $baseFontSize,
+  xxl: 19px
+) !default;

@@ -1,0 +1,15 @@
+.icon {
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  width: 1.12em;
+  height: 1.12em;
+  // line-height: normal;
+}
+
+
+svg.icon {
+  fill: currentColor;
+}

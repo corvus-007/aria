@@ -1,0 +1,20 @@
+.form-testimonial {
+  margin-top: 3em;
+
+  legend {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+
+  &__submit {
+    width: 100%;
+    background-color: $accentColor2;
+  }
+
+  @include mq($from: sm) {
+
+    &__submit {
+      width: auto;
+    }
+  }
+}

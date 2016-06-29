@@ -1,0 +1,84 @@
+.product-card-gallery {
+  // margin-top: 3em;
+  margin-bottom: 2em;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 0;
+  margin-right: 0;
+
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  &-item {
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+    &:hover {
+      border-color: $accentColor2;
+    }
+
+    a {
+      outline: none;
+    }
+  }
+
+
+  &-content {
+    
+  }
+
+  // .slick-arrow {
+  //   position: absolute;
+  //   z-index: 1;
+  //   width: 50px;
+  //   top: 0;
+  //   bottom: 0;
+  //   background: none;
+  //   background-color: $accentColor;
+  //   background-repeat: no-repeat;
+  //   outline: none;
+  //   border: none;
+  //   background-size: contain;
+  //   background-position: 50%;
+  //   cursor: pointer;
+  //   transition: opacity 0.2s, transform 0.5s;
+  //   overflow: hidden;
+  //   text-indent: 110%;
+  //   padding: 0;
+  //   font-size: 0;
+
+  //   &:hover {
+  //     opacity: 0.5;
+  //   }
+
+  //   &:active {
+  //     opacity: 0.4;
+  //   }
+
+  // }
+
+  .slick-prev {
+    left: 0;
+    right: auto;
+  }
+
+  .slick-next {
+    right: 0;
+    left: auto;
+  }
+
+  .slick-disabled {
+    opacity: 0.1;
+    cursor: default;
+    // transform: scale(0);1
+  }
+
+  @include mq($from: md) {
+      &-item {
+      margin-right: 0.25em;
+      margin-left: 0.25em;
+      padding: 5px;
+    }
+  }
+}

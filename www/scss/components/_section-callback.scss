@@ -1,0 +1,17 @@
+.section-callback {
+  // @extend .section;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &__header {
+    @extend .section__header;
+  }
+
+  &__title {
+    @extend .section__title;
+  }
+
+  &__content {
+    // @extend .section__content;
+  }
+}
