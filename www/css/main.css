@@ -405,6 +405,11 @@ textarea {
   list-style: none;
 }
 
+.vertical-slider .slick-arrow {
+  transform: translateX(-50%);
+  transform: translate3d(-50%, 0, 0);
+}
+
 .slider .slick-arrow, .gallery-slider__control {
   transform: translateY(-50%);
   transform: translate3d(0, -50%, 0);
@@ -5736,6 +5741,80 @@ select.form-control {
   content: '▲';
 }
 
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #777;
+}
+
+.slider .slick-arrow:hover {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.slider .slick-arrow:active {
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+.slider .slick-arrow__icon {
+  font-size: 1.8em;
+}
+
+.slider .slick-prev {
+  right: 100%;
+}
+
+.slider .slick-next {
+  left: 100%;
+}
+
+.vertical-slider {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.vertical-slider .slick-arrow {
+  position: absolute;
+  left: 50%;
+  padding: 0.5em;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #777;
+}
+
+.vertical-slider .slick-arrow:hover {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.vertical-slider .slick-arrow:active {
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+.vertical-slider .slick-arrow.slick-disabled {
+  opacity: 0.3;
+  background-color: transparent !important;
+}
+
+.vertical-slider .slick-arrow__icon {
+  font-size: 1.8em;
+}
+
+.vertical-slider .slick-prev {
+  top: 0;
+}
+
+.vertical-slider .slick-next {
+  bottom: 0;
+}
+
 .hero-slider {
   overflow: hidden;
 }
@@ -5837,38 +5916,6 @@ select.form-control {
   .hero-slider .slick-dots .slick-active button {
     background-color: #174f53;
   }
-}
-
-.slider .slick-arrow {
-  position: absolute;
-  top: 50%;
-  padding: 0.5em;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  color: #777;
-}
-
-.slider .slick-arrow:hover {
-  background-color: rgba(245, 245, 245, 0.8);
-}
-
-.slider .slick-arrow:active {
-  background-color: rgba(247, 247, 247, 0.8);
-}
-
-.slider .slick-arrow__icon {
-  font-size: 1.8em;
-}
-
-.slider .slick-prev {
-  right: 100%;
-}
-
-.slider .slick-next {
-  left: 100%;
 }
 
 .goods-slider {

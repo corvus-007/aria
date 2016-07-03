@@ -1,0 +1,46 @@
+.vertical-slider {
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+  .slick-arrow {
+    @extend %transform-middle-x;
+    position: absolute;
+    left: 50%;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #777;
+
+    &:hover {
+      background-color: rgba(#f5f5f5, 0.8);
+    }
+
+    &:active {
+      background-color: rgba(#f7f7f7, 0.8);
+    }
+
+    &.slick-disabled {
+      opacity: 0.3;
+      background-color: transparent !important;
+    }
+
+    &__icon {
+      font-size: 1.8em;
+    }
+  }
+
+  .slick-prev {
+    // top: auto;
+    // bottom: 100%;
+    top: 0;
+  }
+
+  .slick-next {
+    // bottom: auto;
+    // top: 100%;
+    bottom: 0;
+  }
+}

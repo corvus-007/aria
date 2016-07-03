@@ -247,7 +247,8 @@ if ($rotatorNews.length) {
     vertical: true,
     slidesToShow: 6,
     infinite: false,
-    // centerMode: true
+      prevArrow: '<button class="slick-prev"><svg class="slick-arrow__icon icon"><use xlink:href="images/svg_icons.svg#arrow-prev_vertical"></use></svg></button>',
+      nextArrow: '<button class="slick-next"><svg class="slick-arrow__icon icon"><use xlink:href="images/svg_icons.svg#arrow-next_vertical"></use></svg></button>',
   });
 }
 
