@@ -1,0 +1,148 @@
+/*=============================
+=            Table            =
+=============================*/
+.response-table {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.response-table + .response-table caption {
+  margin-top: 1.8em;
+}
+
+.table {
+  width: 100%;
+  cursor: default;
+}
+
+.table caption {
+  margin-bottom: 1em;
+  text-align: left;
+  font-size: 1.6em;
+}
+
+.table thead {
+  font-size: 0.9em;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.table thead th {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: 500;
+  border-bottom-width: 2px;
+}
+
+.table tbody tr:hover td {
+  background-color: #fafafa;
+}
+
+.table tbody tr:nth-child(odd) td {
+  background-color: #fefefe;
+}
+
+.table tbody tr:nth-child(odd):hover td {
+  background-color: #fafafa;
+}
+
+.table th,
+.table td {
+  padding: 0.3em 0.9em;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #eee;
+  transition: background-color 0.12s ease-out;
+}
+
+.table_center-col-1 th:nth-child(1),
+.table_center-col-1 td:nth-child(1) {
+  text-align: center;
+}
+
+.table_center-col-2 th:nth-child(2),
+.table_center-col-2 td:nth-child(2) {
+  text-align: center;
+}
+
+.table_center-col-3 th:nth-child(3),
+.table_center-col-3 td:nth-child(3) {
+  text-align: center;
+}
+
+.table_center-col-4 th:nth-child(4),
+.table_center-col-4 td:nth-child(4) {
+  text-align: center;
+}
+
+.table_center-col-5 th:nth-child(5),
+.table_center-col-5 td:nth-child(5) {
+  text-align: center;
+}
+
+.table_center-col-6 th:nth-child(6),
+.table_center-col-6 td:nth-child(6) {
+  text-align: center;
+}
+
+.table_left-col-1 th:nth-child(1),
+.table_left-col-1 td:nth-child(1) {
+  text-align: left;
+}
+
+.table_left-col-2 th:nth-child(2),
+.table_left-col-2 td:nth-child(2) {
+  text-align: left;
+}
+
+.table_left-col-3 th:nth-child(3),
+.table_left-col-3 td:nth-child(3) {
+  text-align: left;
+}
+
+.table_left-col-4 th:nth-child(4),
+.table_left-col-4 td:nth-child(4) {
+  text-align: left;
+}
+
+.table_left-col-5 th:nth-child(5),
+.table_left-col-5 td:nth-child(5) {
+  text-align: left;
+}
+
+.table_left-col-6 th:nth-child(6),
+.table_left-col-6 td:nth-child(6) {
+  text-align: left;
+}
+
+.table_right-col-1 th:nth-child(1),
+.table_right-col-1 td:nth-child(1) {
+  text-align: right;
+}
+
+.table_right-col-2 th:nth-child(2),
+.table_right-col-2 td:nth-child(2) {
+  text-align: right;
+}
+
+.table_right-col-3 th:nth-child(3),
+.table_right-col-3 td:nth-child(3) {
+  text-align: right;
+}
+
+.table_right-col-4 th:nth-child(4),
+.table_right-col-4 td:nth-child(4) {
+  text-align: right;
+}
+
+.table_right-col-5 th:nth-child(5),
+.table_right-col-5 td:nth-child(5) {
+  text-align: right;
+}
+
+.table_right-col-6 th:nth-child(6),
+.table_right-col-6 td:nth-child(6) {
+  text-align: right;
+}
+
+/*=====  End of Table  ======*/

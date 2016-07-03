@@ -1,0 +1,102 @@
+/*=============================
+=            Table            =
+=============================*/
+.response-table {
+  height: 100%;
+  overflow-y: auto;
+
+   & + & {
+    caption {
+      margin-top: 1.8em;
+    }
+  }
+}
+
+.table, {
+  width: 100%;
+  cursor: default;
+  border-collapse: collapse;
+
+  caption {
+    margin-bottom: 1em;
+    text-align: left;
+    font-size: 1.6em;
+    // font-weight: 500;
+  }
+
+  thead {
+    font-size: 0.9em;
+    line-height: normal;
+    text-transform: uppercase;
+
+    th {
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-weight: 500;
+      border-bottom-width: 2px;
+    }
+  }
+
+  tbody {
+    tr {
+
+      &:hover {
+        td {
+          background-color: #fafafa;
+        }
+      }
+
+      &:nth-child(odd) {
+        td {
+          background-color: #fefefe;
+        }
+
+        &:hover {
+          td {
+            background-color: #fafafa;
+          }
+        }
+      }
+    }
+
+  }
+
+  tfoot {
+
+  }
+
+  tr {
+
+  }
+
+
+  th,
+  td {
+    padding: 0.3em 0.9em;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #eee;
+    transition: background-color 0.12s ease-out;
+  }
+
+}
+
+$mapAlign: (left, center, right);
+$countCells: 5;
+
+.table {
+  @each $align in $mapAlign {
+
+    @for $i from 1 through $countCells {
+
+      &_#{$align}-col-#{$i} {
+        th:nth-child(#{$i}),
+        td:nth-child(#{$i}) {
+          text-align: $align;
+        }
+      }
+      
+    }
+
+  }
+}
