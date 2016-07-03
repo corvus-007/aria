@@ -1,17 +1,45 @@
 .post {
   &__header {
-    @extend .container;
-    margin-bottom: rem(55);
+    margin-bottom: rem(20);
+    position: relative;
+  }
+
+  &__main-image-wrapper {
+    @include responsiveObject(720, 200);
+  }
+
+  &__image {
+
+  }
+
+  &__meta {
+    margin-bottom: 1em;
+  }
+
+  &__meta-item {
+    display: inline-block;
+    background-color: $accentColor;
+    padding: 0.3em 0.8em;
+    color: #fff;
+    font-size: 0.8em;
   }
 
   &__title {
     margin: 0;
     font-weight: 600;
-    font-size: rem(27);
+    font-size: rem(24);
+    text-transform: uppercase;
+    font-family: $altFontFamily;
+    background-color: rgba($darkColor, 0.9);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 1em;
+    padding: 0.2em 0.6em;
   }
 
-  &__content {
-
+  &__text {
+    
   }
 
 }

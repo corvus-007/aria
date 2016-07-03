@@ -4056,6 +4056,60 @@ img.mfp-img {
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
 }
 
+/* roboto-300 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/roboto-v15-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/roboto-v15-latin_cyrillic-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-v15-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v15-latin_cyrillic-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Roboto Medium"), local("Roboto-Medium"), url("../fonts/roboto-v15-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/roboto-v15-latin_cyrillic-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v15-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-v15-latin_cyrillic-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-condensed-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url("../fonts/roboto-condensed-v13-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-v13-latin_cyrillic-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-condensed-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("../fonts/roboto-condensed-v13-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-condensed-v13-latin_cyrillic-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html,
 body {
   height: 100%;
@@ -4357,7 +4411,7 @@ form .button-outline {
 /*============================
 =            Grid            =
 ============================*/
-.container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner, .post__header {
+.container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner {
   margin-left: auto;
   margin-right: auto;
   padding-left: 6px;
@@ -4365,38 +4419,38 @@ form .button-outline {
   position: relative;
 }
 
-.container:after, .primary-nav:after, .section__header:after, .section-special-offers__header:after, .section-about__header:after, .section-partners__header:after, .section-callback__header:after, .section__content:after, .section-special-offers__content:after, .section-about__content:after, .section-partners__content:after, .site-header__top-panel:after, .site-footer__inner:after, .post__header:after {
+.container:after, .primary-nav:after, .section__header:after, .section-special-offers__header:after, .section-about__header:after, .section-partners__header:after, .section-callback__header:after, .section__content:after, .section-special-offers__content:after, .section-about__content:after, .section-partners__content:after, .site-header__top-panel:after, .site-footer__inner:after {
   content: "";
   display: table;
   clear: both;
 }
 
 @media (min-width: 34em) {
-  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner, .post__header {
+  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner {
     max-width: 650px;
   }
 }
 
 @media (min-width: 48em) {
-  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner, .post__header {
+  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner {
     max-width: 740px;
   }
 }
 
 @media (min-width: 62em) {
-  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner, .post__header {
+  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner {
     max-width: 930px;
   }
 }
 
 @media (min-width: 80em) {
-  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner, .post__header {
+  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner {
     max-width: 990px;
   }
 }
 
 @media (min-width: 120em) {
-  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner, .post__header {
+  .container, .primary-nav, .section__header, .section-special-offers__header, .section-about__header, .section-partners__header, .section-callback__header, .section__content, .section-special-offers__content, .section-about__content, .section-partners__content, .site-header__top-panel, .site-footer__inner {
     max-width: 1380px;
   }
 }
@@ -6121,13 +6175,60 @@ select.form-control {
 }
 
 .post__header {
-  margin-bottom: 3.05556rem;
+  margin-bottom: 1.11111rem;
+  position: relative;
+}
+
+.post__main-image-wrapper {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-top: 27.77778%;
+}
+
+.post__main-image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-objectfit .post__main-image-wrapper img {
+  height: auto;
+}
+
+.no-objectfit.csstransforms .post__main-image-wrapper img {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.post__meta {
+  margin-bottom: 1em;
+}
+
+.post__meta-item {
+  display: inline-block;
+  background-color: #174f53;
+  padding: 0.3em 0.8em;
+  color: #fff;
+  font-size: 0.8em;
 }
 
 .post__title {
   margin: 0;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.33333rem;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgba(42, 42, 42, 0.9);
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 1em;
+  padding: 0.2em 0.6em;
 }
 
 .product {
