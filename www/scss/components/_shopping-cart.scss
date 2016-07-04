@@ -1,0 +1,50 @@
+.shopping-cart {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: rem(30);
+  font-family: $altFontFamily;
+
+  td:first-child {
+    // width: 50%;
+  }
+
+  th,
+  td {
+    padding: rem(10);
+    vertical-align: middle;
+  }
+
+  thead {
+    background-color: $bgColor;
+    font-size: rem(12);
+
+    th,
+    td {
+      text-align: left;
+      font-weight: normal;
+
+    }
+
+  }
+
+  tbody {
+    tr {
+      & + tr {
+        td {
+          border-top: 2px solid $bgColor;
+        }
+      }
+    }
+    td {
+    }
+  }
+
+  @include mq($from: md) {
+
+    th,
+    td {
+      padding: rem(15);
+    }
+  }
+
+}

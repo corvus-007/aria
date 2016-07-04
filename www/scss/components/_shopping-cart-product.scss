@@ -1,0 +1,65 @@
+.shopping-cart-product {
+  font-size: rem(14);
+  
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  &__link-left {
+    width: 25%;
+    flex: 1 0 25%;
+  }
+
+  &__link-right {
+    margin-left: rem(30);
+    flex-basis: 100%;
+  }
+
+  &__image-wrapper {
+    @include responsiveObject(125, 100);
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: normal;
+    font-size: rem(16);
+  }
+
+
+  &__price {
+    white-space: nowrap;
+    font-size: rem(14);
+    line-height: 1.2;
+  }
+
+  &__old-price {
+    display: block;
+    color: #ff154c;
+    text-decoration: line-through;
+    font-size: em(12, 14);
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__amount {
+    // font-weight: 600;
+  }
+
+  // &__action {
+  //   padding: 0.5em;
+  //   margin-right: -0.5em;
+  //   display: inline-block;
+  //   text-decoration: none;
+  //   color: currentColor;
+  //   line-height: 1;
+  //   float: right;
+  // }
+
+}

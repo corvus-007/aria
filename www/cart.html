@@ -111,86 +111,121 @@
                 <form method="post" name="cart">
 
 
-                  <table id="purchases" class="purchases-table">
-
+                <table class="shopping-cart" id="purchases">
+                  <thead>
                     <tr>
+                      <th>Товар</th>
+                      <th>Цена</th>
+                      <th>Количество</th>
+                      <th colspan="2">Сумма</th>
+                    </tr>
+                  </thead>
 
-                      <td class="image">
-                        <a href="products/proel-el650-podstavka-pod-monitor-nagruzka-50kg-"><img src="http://aria.heartsdev.com/files/products/00000010922.50x50.jpeg?9a3a4e80e9d3840eb5b380c7c595c642" alt=""></a>
-                      </td>
-
-
-                      <td class="name">
-                        <a href="products/proel-el650-podstavka-pod-monitor-nagruzka-50kg-">Proel EL650 Подставка под монитор, нагрузка 50кГ.</a>
-                      </td>
-
-
-                      <td class="price">
-                        1 915 руб
-                      </td>
-
-
-                      <td class="amount">
-                        <select name="amounts[266]" onchange="document.cart.submit();">
-                          <option value="1" selected>1 шт</option>
-                          <option value="2" >2 шт</option>
-                          <option value="3" >3 шт</option>
-                          <option value="4" >4 шт</option>
-                          <option value="5" >5 шт</option>
-                        </select>
-                      </td>
-
-
-                      <td class="price">
-                        1 915&nbsp;руб
-                      </td>
-
-
-                      <td class="remove">
-                        <a href="cart/remove/266">
-                          <img src="http://aria.heartsdev.com/design/default/images/delete.png" title="Удалить из корзины" alt="Удалить из корзины">
+                  <tbody>
+                    <tr class="shopping-cart-product">
+                      <td>
+                        <a href="products/proel-el650-podstavka-pod-monitor-nagruzka-50kg-" class="shopping-cart-product__link">
+                          <div class="shopping-cart-product__link-left">
+                            <div class="shopping-cart-product__image-wrapper">
+                              <img src="http://aria.heartsdev.com/files/products/00000010922.50x50.jpeg?9a3a4e80e9d3840eb5b380c7c595c642" alt="" class="shopping-cart-product__image">
+                            </div>
+                          </div>
+                          <div class="shopping-cart-product__link-right">
+                            <div class="shopping-cart-product__title">Proel EL650 Подставка под монитор, нагрузка 50кГ.</div>
+                          </div>
                         </a>
                       </td>
 
+                      <td>
+                        <span class="shopping-cart-product__price">1 915 ₽</span>
+                      </td>
+
+                      <td>
+                        <select name="amounts[266]" class="form-control shopping-cart-product__amount" onchange="document.cart.submit();">
+                          <option value="1" selected>1 шт</option>
+                          <option value="2">2 шт</option>
+                          <option value="3">3 шт</option>
+                          <option value="4">4 шт</option>
+                          <option value="5">5 шт</option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <b class="shopping-cart-product__price">1 915 ₽</b>
+                      </td>
+
+                      <td>
+                        <a href="cart/remove/266" class="shopping-cart-product__action" title="Удалить из корзины">
+                          <img src="http://aria.heartsdev.com/design/default/images/delete.png" alt="Удалить из корзины">
+                        </a>
+                      </td>
                     </tr>
-                    <tr class="coupon">
-                      <th class="image"></th>
-                      <th class="name" colspan="3">Код купона или подарочного ваучера
 
-                        <div>
-                          <input type="text" name="coupon_code" value="" class="coupon_code">
-                        </div>
-                        <div>
-                          <input type="button" name="apply_coupon"  value="Применить купон" onclick="document.cart.submit();">
-                        </div>
-                      </th>
-                      <th class="price">
-                      </th>
-                      <th class="remove"></th>
+                    <tr class="shopping-cart-product">
+                      <td>
+                        <a href="products/proel-el650-podstavka-pod-monitor-nagruzka-50kg-" class="shopping-cart-product__link">
+                          <div class="shopping-cart-product__link-left">
+                            <div class="shopping-cart-product__image-wrapper">
+                              <img src="http://aria.heartsdev.com/files/products/00000010922.50x50.jpeg?9a3a4e80e9d3840eb5b380c7c595c642" alt="" class="shopping-cart-product__image">
+                            </div>
+                          </div>
+                          <div class="shopping-cart-product__link-right">
+                            <div class="shopping-cart-product__title">Proel EL650 Подставка под монитор, нагрузка 50кГ.</div>
+                          </div>
+                        </a>
+                      </td>
+
+                      <td>
+                        <span class="shopping-cart-product__price">1 915 ₽</span>
+                      </td>
+
+                      <td>
+                        <select name="amounts[266]" class="form-control shopping-cart-product__amount" onchange="document.cart.submit();">
+                          <option value="1" selected>1 шт</option>
+                          <option value="2">2 шт</option>
+                          <option value="3">3 шт</option>
+                          <option value="4">4 шт</option>
+                          <option value="5">5 шт</option>
+                        </select>
+                      </td>
+
+                      <td>
+                        <b class="shopping-cart-product__price">1 915 ₽</b>
+                      </td>
+
+                      <td>
+                        <a href="cart/remove/266" class="shopping-cart-product__action" title="Удалить из корзины">
+                          <img src="http://aria.heartsdev.com/design/default/images/delete.png" alt="Удалить из корзины">
+                        </a>
+                      </td>
                     </tr>
+                  </tbody>
 
-
-                    <script>
-                      $("input[name='coupon_code']").keypress(function(event){
-                        if(event.keyCode == 13){
-                          $("input[name='name']").attr('data-format', '');
-                          $("input[name='email']").attr('data-format', '');
-                          document.cart.submit();
-                        }
-                      });
-                    </script>
-
-
-
-                    <tr>
-                      <th class="image"></th>
-                      <th class="name"></th>
-                      <th class="price" colspan="4">
-                        Итого
-                        1 915&nbsp;руб
-                      </th>
+                  <tbody>
+                    <tr class="shopping-cart-coupon">
+                      <td><!-- <label class="form-label" for="coupon_code">Код купона или подарочного ваучера</label> --><input type="text" name="coupon_code" id="coupon_code" value="" class="coupon_code form-control" placeholder="Код купона или подарочного ваучера"></td>
+                      <td colspan="4"><input type="button" class="button button_fluid" name="apply_coupon" value="Применить купон" onclick="document.cart.submit();">
+                        <script>
+                          $("input[name='coupon_code']").keypress(function(event){
+                            if(event.keyCode == 13){
+                              $("input[name='name']").attr('data-format', '');
+                              $("input[name='email']").attr('data-format', '');
+                              document.cart.submit();
+                            }
+                          });
+                        </script>
+                      </td>
                     </tr>
-                  </table>
+                  </tbody>
+
+                  <tfoot>
+                    <tr class="shopping-cart-total">
+                      <td colspan="3" class="text-right">Итого:</td>
+                      <td>1 915 ₽</td>
+                      <td></td>
+                    </tr>
+                  </tfoot>
+                </table>
 
 
 
