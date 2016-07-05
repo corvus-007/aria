@@ -1,0 +1,55 @@
+.option {
+  font-family: $altFontFamily;
+
+  &__title {
+    margin-top: 0;
+    display: block;
+    margin-bottom: 0.3em;
+    font-size: rem(17);
+    font-weight: 600;
+    position: relative;
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+  &__title-control {
+  }
+
+  &__title-text {
+    margin-left: 1rem;
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0;
+      border-top: 1px solid currentColor;
+      transition: width 0.2s ease-out;
+    }
+
+    // Context
+    .option__title-control:checked + & {
+      color: $accentColor;
+      &:before {
+        width: 100%;
+        transition-timing-function: ese-in;
+      }
+    }
+  }
+
+  &__description {
+    font-size: rem(14);
+    color: #6a6a6a;
+    margin-left: 2rem;
+
+    p + p {
+      margin-top: 0.35em;
+    }
+  }
+}

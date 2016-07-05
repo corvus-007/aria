@@ -1,0 +1,22 @@
+.order-info {
+  cursor: default;
+  border-collapse: collapse;
+  font-size: rem(15);
+
+  tbody {
+
+  }
+
+  tr {
+
+  }
+
+  td {
+    padding: 0.4em;
+
+    &:first-child {
+      font-weight: 600;
+      padding-left: 0;
+    }
+  }
+}

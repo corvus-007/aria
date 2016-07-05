@@ -25,7 +25,7 @@
   }
 
   thead {
-    font-size: 0.9em;
+    // font-size: 0.9em;
     line-height: normal;
     text-transform: uppercase;
 
@@ -89,7 +89,7 @@ $countCells: 5;
 
     @for $i from 1 through $countCells {
 
-      &_#{$align}-col-#{$i} {
+      &_#{$align}-colgroup-#{$i} {
         th:nth-child(#{$i}),
         td:nth-child(#{$i}) {
           text-align: $align;

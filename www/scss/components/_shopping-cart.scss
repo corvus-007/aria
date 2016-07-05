@@ -3,6 +3,7 @@
   border-collapse: collapse;
   margin-bottom: rem(30);
   font-family: $altFontFamily;
+  cursor: default;
 
   td:first-child {
     // width: 50%;
@@ -36,6 +37,14 @@
       }
     }
     td {
+    }
+  }
+
+  tfoot {
+    th,
+    td {
+      padding-top: rem(5);
+      padding-bottom: rem(5);
     }
   }
 

@@ -3,9 +3,9 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    
-    <title>Корзина / Музыкальный салон «Ария»</title>
-    
+
+    <title>Заказ / Музыкальный салон «Ария»</title>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -105,171 +105,202 @@
               <div class="col-md-9">
 
                 <header class="page-header">
-                  <h1 class="page-title">В корзине 1 товар</h1>
+                  <h1 class="page-title">Ваш заказ №5 принят</h1>
                 </header>
 
-                <form method="post" name="cart">
+                <table class="shopping-cart" id="purchases">
+                  <thead>
+                    <tr>
+                      <th>Товар</th>
+                      <th>Цена</th>
+                      <th>Количество</th>
+                      <th>Сумма</th>
+                    </tr>
+                  </thead>
 
-
-                  <table class="shopping-cart" id="purchases">
-                    <thead>
-                      <tr>
-                        <th>Товар</th>
-                        <th>Цена</th>
-                        <th>Количество</th>
-                        <th colspan="2">Сумма</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr class="shopping-cart-product">
-                        <td>
-                          <a href="products/proel-el650-podstavka-pod-monitor-nagruzka-50kg-" class="shopping-cart-product__link">
-                            <div class="shopping-cart-product__link-left">
-                              <div class="shopping-cart-product__image-wrapper">
-                                <img src="http://aria.heartsdev.com/files/products/00000010922.50x50.jpeg?9a3a4e80e9d3840eb5b380c7c595c642" alt="" class="shopping-cart-product__image">
-                              </div>
+                  <tbody>
+                    <tr class="shopping-cart-product">
+                      <td>
+                        <a href="products/proel-el650-podstavka-pod-monitor-nagruzka-50kg-" class="shopping-cart-product__link">
+                          <div class="shopping-cart-product__link-left">
+                            <div class="shopping-cart-product__image-wrapper">
+                              <img src="http://aria.heartsdev.com/files/products/00000010922.50x50.jpeg?9a3a4e80e9d3840eb5b380c7c595c642" alt="" class="shopping-cart-product__image">
                             </div>
-                            <div class="shopping-cart-product__link-right">
-                              <div class="shopping-cart-product__title">Proel EL650 Подставка под монитор, нагрузка 50кГ.</div>
-                            </div>
-                          </a>
-                        </td>
+                          </div>
+                          <div class="shopping-cart-product__link-right">
+                            <div class="shopping-cart-product__title">Proel EL650 Подставка под монитор, нагрузка 50кГ.</div>
+                          </div>
+                        </a>
+                      </td>
 
-                        <td>
-                          <span class="shopping-cart-product__price">1 915 ₽</span>
-                        </td>
+                      <td>
+                        <span class="shopping-cart-product__price">1 915 ₽</span>
+                      </td>
 
-                        <td>
-                          <select name="amounts[266]" class="form-control shopping-cart-product__amount" onchange="document.cart.submit();">
-                            <option value="1" selected>1 шт</option>
-                            <option value="2">2 шт</option>
-                            <option value="3">3 шт</option>
-                            <option value="4">4 шт</option>
-                            <option value="5">5 шт</option>
-                          </select>
-                        </td>
+                      <td class="text-center">
+                        × 1
+                      </td>
 
-                        <td>
-                          <b class="shopping-cart-product__price">1 915 ₽</b>
-                        </td>
+                      <td>
+                        <b class="shopping-cart-product__price">1 915 ₽</b>
+                      </td>
+                    </tr>
 
-                        <td>
-                          <a href="cart/remove/266" class="shopping-cart-product__action" title="Удалить из корзины">
-                            <img src="http://aria.heartsdev.com/design/default/images/delete.png" alt="Удалить из корзины">
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
+                  </tbody>
 
-                    <tbody>
-                      <tr class="shopping-cart-coupon">
-                        <td><!-- <label class="form-label" for="coupon_code">Код купона или подарочного ваучера</label> --><input type="text" name="coupon_code" id="coupon_code" value="" class="coupon_code form-control" placeholder="Код купона или подарочного ваучера"></td>
-                        <td colspan="4"><input type="button" class="button button_fluid" name="apply_coupon" value="Применить купон" onclick="document.cart.submit();">
-                          <script>
-                            $("input[name='coupon_code']").keypress(function(event){
-                              if(event.keyCode == 13){
-                                $("input[name='name']").attr('data-format', '');
-                                $("input[name='email']").attr('data-format', '');
-                                document.cart.submit();
-                              }
-                            });
-                          </script>
-                        </td>
-                      </tr>
-                    </tbody>
 
-                    <tfoot>
-                      <tr class="shopping-cart-total">
-                        <td colspan="3" class="text-right">Итого:</td>
-                        <td colspan="2">1 915 ₽</td>
-                      </tr>
-                    </tfoot>
-                  </table>
+                  <tfoot>
+                    <tr class="shopping-cart-total">
+                      <td colspan="3" class="text-right">Итого:</td>
+                      <td>1 915 ₽</td>
+                    </tr>
+                    <tr class="shopping-cart-total">
+                      <td colspan="3" class="text-right">Курьерская доставка по Москве</td>
+                      <td>120 ₽</td>
+                    </tr>
+                  </tfoot>
+                </table>
 
 
 
+
+                <div class="questioner-section">
+                  <div class="questioner-section__title">Детали заказа</div>
+                  <div class="questioner-section__content">
+                    <table class="order-info table_right-colgroup-1 table_left-colgroup-2">
+                      <tbody>
+                        <tr>
+                          <td>Дата заказа</td>
+                          <td>03.07.2016 в 17:08</td>
+                        </tr>
+                        <tr>
+                          <td>Имя</td>
+                          <td>Денис Васильев</td>
+                        </tr>
+                        <tr>
+                          <td>Email</td>
+                          <td>corvus007@yandex.ru</td>
+                        </tr>
+                        <tr>
+                          <td>Телефон</td>
+                          <td>9529635977</td>
+                        </tr>
+                        <tr>
+                          <td>Адрес доставки</td>
+                          <td>Камозина</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+
+                <form action="" method="post">
                   <fieldset class="questioner-section">
-                    <legend class="questioner-section__title">Выберите способ доставки:</legend>
+                    <legend class="questioner-section__title">Выберите способ оплаты:</legend>
                     <div class="questioner-section__content">
                       <ul class="options-list">
                         <li class="options-list__item">
                           <div class="option">
-                            <label for="deliveries_1" class="option__title">
-                              <input type="radio" class="option__title-control" name="delivery_id" value="1" checked id="deliveries_1">
-                              <span class="option__title-text">Курьерская доставка по Москве (120&nbsp;₽)</span>
+                            <label for="payment_2" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="2" checked="" id="payment_2">
+                              <span class="option__title-text">Webmoney wmz, к оплате 76,60 wmz</span>
                             </label>
                             <div class="option__description">
-                              <p>Курьерская доставка осуществляется на следующий день после оформления заказа, если товар есть в наличии. Курьерская доставка осуществляется в пределах Томска и Северска ежедневно с 10.00 до 21.00. Заказ на сумму свыше 300 рублей доставляется бесплатно.</p>
-                              <p>Стоимость бесплатной доставки раcсчитывается от суммы заказа с учтенной скидкой. В случае если сумма заказа после применения скидки менее 300р, осуществляется платная доставка.</p>
-                              <p>При сумме заказа менее 300 рублей стоимость доставки составляет от 50 рублей.</p>
+                              <p>Оплата через платежную систему&nbsp;<a href="http://www.webmoney.ru">WebMoney</a>. У вас должен быть счет в этой системе для того, чтобы произвести оплату. Сразу после оформления заказа вы будете перенаправлены на специальную страницу системы WebMoney, где сможете произвести платеж в титульных знаках WMZ.</p>
                             </div>
                           </div>
                         </li>
-                      
+
                         <li class="options-list__item">
                           <div class="option">
-                            <label for="deliveries_2" class="option__title">
-                              <input type="radio" class="option__title-control" name="delivery_id" value="2" id="deliveries_2">
-                              <span class="option__title-text">Самовывоз (бесплатно)</span>
+                            <label for="payment_1" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="1" id="payment_1">
+                              <span class="option__title-text">Квитанция, к оплате 1 915 ₽</span>
                             </label>
                             <div class="option__description">
-                              <p>Удобный, бесплатный и быстрый способ получения заказа.</p>
-                              <p>Адрес офиса: Адрес офиса: Москва, ул. Арбат, 1/3, офис 419</p>
+                              <p>Вы можете распечатать квитанцию и оплатить её в любом отделении банка.</p>
                             </div>
                           </div>
                         </li>
+
+                        <li class="options-list__item">
+                          <div class="option">
+                            <label for="payment_3" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="3" id="payment_3">
+                              <span class="option__title-text">Робокасса, к оплате 76,60 wmz</span>
+                            </label>
+                            <div class="option__description">
+                              <p>ROBOKASSA – сервис для организации приема платежей на сайте, интернет магазине и социальных сетях. Прием платежей осуществляется при минимальных комиссиях.</p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="options-list__item">
+                          <div class="option">
+                            <label for="payment_4" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="4" id="payment_4">
+                              <span class="option__title-text">PayPal, к оплате 63,83 $</span>
+                            </label>
+                            <div class="option__description">
+                              <p>Совершайте покупки безопасно, без раскрытия информации о своей кредитной карте. PayPal защитит вас, если возникнут проблемы с покупкой.</p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="options-list__item">
+                          <div class="option">
+                            <label for="payment_5" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="5" id="payment_5">
+                              <span class="option__title-text">Оплата через Интеркассу, к оплате 1 915 ₽</span>
+                            </label>
+                            <div class="option__description">
+                              <p>Это удобный в использовании сервис, подключение к которому позволит Интернет-магазинам, веб-сайтам и прочим торговым площадкам принимать все возможные формы оплаты в максимально короткие сроки.</p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="options-list__item">
+                          <div class="option">
+                            <label for="payment_6" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="6" id="payment_6">
+                              <span class="option__title-text">Оплата картой через Liqpay.com, к оплате 1 915 ₽</span>
+                            </label>
+                            <div class="option__description">
+                              <p>Благодаря своей открытости и универсальности LiqPAY стремительно интегрируется со многими платежными системами и платформами и становится стандартом платежных операций.</p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="options-list__item">
+                          <div class="option">
+                            <label for="payment_7" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="7" id="payment_7">
+                              <span class="option__title-text">Оплата через Pay2Pay, к оплате 1 915 ₽</span>
+                            </label>
+                            <div class="option__description">
+                              <p>Универсальный платежный сервис Pay2Pay призван облегчить и максимально упростить процесс приема электронных платежей на Вашем сайте. Мы открыты для всего нового и сверхсовременного.</p>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="options-list__item">
+                          <div class="option">
+                            <label for="payment_8" class="option__title">
+                            <input type="radio" class="option__title-control" name="payment_method_id" value="8" id="payment_8">
+                              <span class="option__title-text">Оплатить через QIWI, к оплате 1 915 ₽</span>
+                            </label>
+                            <div class="option__description">
+                              <p>QIWI — удобный сервис для оплаты повседневных услуг.</p>
+                            </div>
+                          </div>
+                        </li>
+
                       </ul>
                     </div>
                   </fieldset>
 
-
-
-                  <fieldset class="questioner-section">
-                    <legend class="questioner-section__title">Адрес получателя</legend>
-                    <div class="questioner-section__content">
-                      <div class="row">
-                        <div class="form-group col-md-6">
-                          <label class="form-label">Имя, фамилия</label>
-                          <input class="form-control" name="name" type="text" value="" data-format=".+" data-notice="Введите имя"/>
-                        </div>
-                        
-                        <div class="form-group col-md-6">
-                          <label class="form-label">Email</label>
-                          <input class="form-control" name="email" type="email" value="" data-format="email" data-notice="Введите email" />
-                          <!-- Изменил type="text" -> type="email" -->
-                        </div>
-
-                        <div class="form-group col-md-6">
-                          <label class="form-label">Телефон</label>
-                          <input class="form-control" name="phone" type="text" value="" />
-                        </div>
-
-                        <div class="form-group col-md-6">
-                          <label class="form-label">Адрес доставки</label>
-                          <input class="form-control" name="address" type="text" value=""/>
-                        </div>
-
-                        <div class="form-group col-12">
-                          <label class="form-label" for="order_comment">Комментарий к&nbsp;заказу</label>
-                          <textarea class="form-control" rows="4" name="comment" id="order_comment"></textarea>
-                        </div>
-
-                        <div class="form-group col-md-6">
-                          <label class="form-label" for="comment_captcha">Введите капчу</label>
-                          <div class="row">
-                            <div class="col-4"><div class="captcha"><img src="http://aria.heartsdev.com/captcha/image.php?3132" alt='captcha'/></div></div>
-                            <div class="col-4"><input class="input_captcha form-control" id="comment_captcha" type="text" name="captcha_code" value="" pattern="[0-9]{5}" data-format="\d\d\d\d" data-notice="Введите капчу"/></div>
-                            <!-- Указал атрибут pattern="[0-9]{5}" если-что удали -->
-                          </div>
-                        </div>
-
-                        <div class="col-12">
-                          <input type="submit" name="checkout" class="button button_access form-submit" value="Оформить заказ">
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
+                  <input type="submit" class="button button_access form-submit" value="Закончить заказ">
                 </form>
 
               </div>
